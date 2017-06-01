@@ -12,7 +12,14 @@ $ docker-compose up -d
 ```
 $ terraform apply
 ```
+
 * Start Spring Boot App
 
-* Visit http://localhost:8500/ui/  to check service
+* Visit http://localhost:8500/ui/  to check service and KV data
+
+### References
+
+* Spring Cloud Consul: http://cloud.spring.io/spring-cloud-static/spring-cloud-consul/1.2.1.RELEASE/
+* Consul: https://www.consul.io/
+* Terraform Consul provider： https://www.terraform.io/docs/providers/consul/index.html
 
