@@ -1,5 +1,5 @@
 consul:
-    image: consul:0.8.3
+    image: consul:0.9.3
     volumes:
       - /Users/linux_china/data/consul:/consul/data
     ports:
