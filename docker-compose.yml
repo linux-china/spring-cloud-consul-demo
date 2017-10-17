@@ -1,11 +1,13 @@
-consul:
-    image: consul:0.9.3
-    volumes:
-      - /Users/linux_china/data/consul:/consul/data
-    ports:
-      - "8300:8300"
-      - "8301:8301"
-      - "8302:8302"
-      - "8400:8400"
-      - "8500:8500"
-      - "8600:53/udp"
+version: "3"
+services:
+  consul:
+      image: consul:1.0.0
+      volumes:
+        - /Users/linux_china/data/consul:/consul/data
+      ports:
+        - "8300:8300"
+        - "8301:8301"
+        - "8302:8302"
+        - "8400:8400"
+        - "8500:8500"
+        - "8600:53/udp"
