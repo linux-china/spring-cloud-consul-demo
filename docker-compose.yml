@@ -1,9 +1,7 @@
 version: "3"
 services:
   consul:
-      image: consul:1.1.0
-      environment:
-        - CONSUL_UI_BETA=true
+      image: consul:1.2.0
       volumes:
         - /Users/linux_china/data/consul:/consul/data
       ports:
