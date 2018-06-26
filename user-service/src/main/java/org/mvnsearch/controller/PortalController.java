@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class PortalController {
-    @Value("${company}")
+    @Value("${company:'mvnsearch.org'}")
     private String company;
 
     @GetMapping("/")
