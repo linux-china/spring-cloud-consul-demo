@@ -64,7 +64,7 @@ public class ConsulClientTest {
 
     @Test
     public void testQueryServices() {
-        Response<List<HealthService>> healthServices = client.getHealthServices("user-service", true, null);
+        Response<List<HealthService>> healthServices = client.getHealthServices("httpbin.org", true, null);
         for (HealthService healthService : healthServices.getValue()) {
             System.out.println(healthService.getService().getId());
         }
