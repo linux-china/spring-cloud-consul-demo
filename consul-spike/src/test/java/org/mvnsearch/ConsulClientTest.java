@@ -2,7 +2,6 @@ package org.mvnsearch;
 
 import com.ecwid.consul.v1.ConsulClient;
 import com.ecwid.consul.v1.Response;
-import com.ecwid.consul.v1.agent.model.Check;
 import com.ecwid.consul.v1.agent.model.NewCheck;
 import com.ecwid.consul.v1.agent.model.NewService;
 import com.ecwid.consul.v1.health.model.HealthService;
@@ -17,7 +16,7 @@ import java.util.List;
  * @author linux_china
  */
 public class ConsulClientTest {
-    
+
     private ConsulClient client = new ConsulClient("localhost");
 
     /**
@@ -46,6 +45,21 @@ public class ConsulClientTest {
         service2.setAddress("192.168.0.46");
         service2.setPort(8082);
         client.agentServiceRegister(service2);
+    }
+
+    @Test
+    public void testRegisterHttpBinService() {
+        NewService service1 = new NewService();
+        service1.setId("httpbin.org");
+        service1.setName("httpbin.org");
+        service1.setAddress("54.173.32.212");
+        service1.setPort(80);
+        NewService.Check check = new NewService.Check();
+        check.setHttp("http://httpbin.org/status/200");
+        check.setInterval("10s");
+        check.setTimeout("2s");
+        service1.setCheck(check);
+        client.agentServiceRegister(service1);
     }
 
     @Test
