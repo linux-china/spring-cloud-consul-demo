@@ -3,7 +3,7 @@ version: '3'
 services:
 
   consul-agent-1: &consul-agent
-    image: consul:1.5.0
+    image: consul:1.5.1
     networks:
       - consul-demo
     command: "agent -retry-join consul-server-bootstrap -client 0.0.0.0"
