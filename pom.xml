@@ -13,6 +13,8 @@
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <platform-bom.version>Cairo-SR8</platform-bom.version>
+        <netty.version>4.1.37.Final</netty.version>
+        <junit5.version>5.5.0</junit5.version>
     </properties>
 
     <modules>
@@ -47,6 +49,20 @@
                 <version>${platform-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit5.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-bom</artifactId>
+                <version>${netty.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
