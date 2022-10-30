@@ -6,7 +6,7 @@ import com.ecwid.consul.v1.agent.model.NewCheck;
 import com.ecwid.consul.v1.agent.model.NewService;
 import com.ecwid.consul.v1.health.model.HealthService;
 import com.ecwid.consul.v1.kv.model.GetBinaryValue;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class ConsulClientTest {
     /**
      * Rigourous Test :-)
      */
-    @org.junit.Test
+    @Test
     public void testKVOperation() {
         String key = "nick";
         String value = "雷卷";
